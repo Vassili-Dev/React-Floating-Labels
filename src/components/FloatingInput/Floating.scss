@@ -1,0 +1,55 @@
+.floating-input {
+    font-size: 1em;
+    padding: 0.9em 0.5em 0.4em 0.5em;
+    font-family: inherit;
+    border: solid #6c6c6c 1px;
+    border-radius: 5px;
+}
+.floating-label {
+    font-size: 1em;
+    display: block;
+    position: absolute;
+    line-height: 1;
+    left: 0.5em;
+    top: 0.75em;
+    font-family: inherit;
+    cursor: text;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    transition: top 0.2s linear,left 0.2s linear, font-size 0.2s linear;
+}
+.floating-label.floating {
+    left: calc(0.5em / 0.6);
+    top: 0.3em;
+    font-size: calc(0.6 * 1em);
+}
+.floating-input:active, .floating-input:focus, .floating-input.dirty {
+    & +.floating-label {
+        left: calc(0.5em / 0.6);
+        top: 0.3em;
+        font-size: calc(0.6 * 1em);
+    }
+    
+}
+.month {
+    .floating-input {
+        color: transparent;
+    }
+    .floating-label {
+        top: calc(50% - 0.5rem);
+    }
+    .floating-input:active, .floating-input:focus, .floating-input.dirty {
+        color: inherit;
+        & +.floating-label {
+            left: calc(0.5em / 0.6);
+            top: 0.3em;
+            font-size: calc(0.6 * 1em);
+        }
+        
+    }
+}
