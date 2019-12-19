@@ -58,33 +58,45 @@ class FloatingInput extends React.Component {
   }
 
 
-  componentDidReceiveProps(nextProps) {
-    const {
-      onChange,
-      className,
-      inputClass,
-      labelClass,
-      ratio,
-      label,
-      children,
-      type,
-      value,
-      ref,
-      ...rest
-    } = nextProps;
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps.onChange !== this.props.onChange ||
+      prevProps.className !== this.props.className ||
+      prevProps.inputClass !== this.props.inputClass ||
+      prevProps.labelClass !== this.props.labelClass ||
+      prevProps.ratio !== this.props.ratio ||
+      prevProps.label !== this.props.label ||
+      prevProps.children !== this.props.children ||
+      prevProps.type !== this.props.type ||
+      prevProps.value !== this.props.value
+    ) {
+      const {
+        onChange,
+        className,
+        inputClass,
+        labelClass,
+        ratio,
+        label,
+        children,
+        type,
+        value,
+        ref,
+        ...rest
+      } = this.props;
 
-    this.setState({
-      value: value,
-      className: className,
-      onChange,
-      inputClass,
-      labelClass,
-      ratio,
-      label,
-      children,
-      type,
-      rest: {...rest},
-    });
+      this.setState({
+        value: value,
+        className: className,
+        onChange,
+        inputClass,
+        labelClass,
+        ratio,
+        label,
+        children,
+        type,
+        rest: {...rest},
+      });
+    }
   }
 
   onDirty(e) {
