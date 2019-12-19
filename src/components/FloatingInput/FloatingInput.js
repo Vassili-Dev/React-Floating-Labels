@@ -33,13 +33,22 @@ class FloatingInput extends React.Component {
       children,
       type,
       value,
+      ref,
       ...rest
     } = props;
 
     this.state = {
       dirty: false,
       value: value,
-      type: type,
+      className: className,
+      onChange,
+      inputClass,
+      labelClass,
+      ratio,
+      label,
+      children,
+      type,
+      rest: {...rest},
     };
     this.oldOnChange = onChange;
     this.rest = {...rest};
@@ -49,8 +58,33 @@ class FloatingInput extends React.Component {
   }
 
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({type: nextProps.type, value: nextProps.value});
+  componentDidReceiveProps(nextProps) {
+    const {
+      onChange,
+      className,
+      inputClass,
+      labelClass,
+      ratio,
+      label,
+      children,
+      type,
+      value,
+      ref,
+      ...rest
+    } = nextProps;
+
+    this.setState({
+      value: value,
+      className: className,
+      onChange,
+      inputClass,
+      labelClass,
+      ratio,
+      label,
+      children,
+      type,
+      rest: {...rest},
+    });
   }
 
   onDirty(e) {
