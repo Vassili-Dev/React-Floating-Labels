@@ -37,8 +37,12 @@ class FloatingInput extends React.Component {
       ...rest
     } = props;
 
+    let dirty = false;
+    if (value && value.length > 0) {
+      dirty = true;
+    }
     this.state = {
-      dirty: false,
+      dirty,
       value: value,
       className: className,
       onChange,
@@ -58,6 +62,12 @@ class FloatingInput extends React.Component {
   }
 
 
+  componentDidMount() {
+    let text = this.props.value;
+    if (text && text.length > 0) {
+      this.setState({dirty: true});
+    }
+  }
   componentDidUpdate(prevProps) {
     if (
       prevProps.onChange !== this.props.onChange ||
