@@ -63,11 +63,12 @@ class FloatingInput extends React.Component {
 
 
   componentDidMount() {
-    let text = this.props.value;
+    const text = this.props.value;
     if (text && text.length > 0) {
       this.setState({dirty: true});
     }
   }
+
   componentDidUpdate(prevProps) {
     if (
       prevProps.onChange !== this.props.onChange ||
@@ -77,8 +78,7 @@ class FloatingInput extends React.Component {
       prevProps.ratio !== this.props.ratio ||
       prevProps.label !== this.props.label ||
       prevProps.children !== this.props.children ||
-      prevProps.type !== this.props.type ||
-      prevProps.value !== this.props.value
+      prevProps.type !== this.props.type
     ) {
       const {
         onChange,
@@ -89,13 +89,11 @@ class FloatingInput extends React.Component {
         label,
         children,
         type,
-        value,
         ref,
         ...rest
       } = this.props;
 
       this.setState({
-        value: value,
         className: className,
         onChange,
         inputClass,
@@ -107,6 +105,16 @@ class FloatingInput extends React.Component {
         rest: {...rest},
       });
     }
+  }
+
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.value !== state.value) {
+      return {
+        value: props.value,
+      };
+    }
+    return null;
   }
 
   onDirty(e) {

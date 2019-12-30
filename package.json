@@ -1,10 +1,10 @@
 {
   "name": "react-floating-labels",
-  "version": "1.0.6",
+  "version": "1.0.13",
   "description": "Floating labels component for rect",
   "main": "dist/react-floating-labels.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --mode production",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -13,34 +13,43 @@
   "license": "ISC",
   "dependencies": {},
   "peerDependencies": {
-    "styled-components": "^4.3.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "styled-components": "^4.3.2",
-    "url-loader": "^2.1.0",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7",
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
     "@storybook/addons": "^5.1.11",
     "@storybook/react": "^5.1.11",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
     "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
     "css-loader": "^3.2.0",
     "eslint": "^6.2.1",
     "eslint-config-google": "^0.13.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.9.0",
     "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "sass-loader": "^7.3.1",
-    "style-loader": "^1.0.0"
+    "style-loader": "^1.0.0",
+    "styled-components": "^4.3.2",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
