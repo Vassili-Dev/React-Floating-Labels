@@ -45,7 +45,7 @@ test('Label Floats then Drops on Input', () => {
        
     
         waitForDomChange(container).then(() => {
-           expect(label).not.toHaveClass("floating");
+           expect(label).toHaveClass("floating");
            waitForDomChange(container).then(() => {
                 expect(label).not.toHaveClass("floating");
                 resolve();
