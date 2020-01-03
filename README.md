@@ -1,5 +1,5 @@
 # React Floating Labels
-## By: Nickolai Vassiliev (Gilae)
+**By: Nickolai Vassiliev (Gilae)**
 
 
 ### Preface
