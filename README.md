@@ -1,6 +1,7 @@
 # React Floating Labels
 **By: Nickolai Vassiliev (Gilae)**
 
+![Node.js Package](https://github.com/gilae/React-Floating-Labels/workflows/Node.js%20Package/badge.svg?branch=master)
 
 ## Preface
 This library provides easy Inputs with Floating Labels.
@@ -44,7 +45,6 @@ const TestComp = (props) => {
 }
 ```
 
-## Todo
+## Contributing
 
-Implement Ref forwarding.
-Move GrowingTextArea's props to state.
+I'm aware this component is still kind of rough, feel free to fork this repository and make a pull request. I'll be sure to take a look at and respond to any issues and pull requests on this repo.
