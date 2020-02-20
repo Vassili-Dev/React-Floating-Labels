@@ -2,7 +2,7 @@
 **By: Nickolai Vassiliev (Gilae)**
 
 
-### Preface
+## Preface
 This library provides easy Inputs with Floating Labels.
 
 It's maintained only by myself, however any help is appreciated.
@@ -11,7 +11,20 @@ I am aware there is already an existing library that does the same thing, but I'
 
 Additionally, this also provides an auto-extending textarea.
 
-### Usage
+## Setup
+**NPM**
+```
+npm install react-floating-labels
+```
+
+or
+
+**Yarn**
+```
+yarn add react-floating-labels
+```
+
+## Usage
 ```
 import { FloatingInput } from 'react-floating-labels';
 
@@ -30,3 +43,8 @@ const TestComp = (props) => {
     </div>
 }
 ```
+
+## Todo
+
+Implement Ref forwarding.
+Move GrowingTextArea's props to state.

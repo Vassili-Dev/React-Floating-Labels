@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
@@ -21,10 +22,6 @@ class GrowingTextArea extends React.Component {
   constructor(props) {
     super(props);
 
-    // eslint-disable-next-line no-unused-vars
-    const {onChange, maxRows, ...rest} = props;
-
-    this.oldOnChange = onChange;
     this.state = {
       rows: 1,
       diff: 0,
@@ -59,14 +56,24 @@ class GrowingTextArea extends React.Component {
           : this.props.maxRows,
       });
     });
-    if (this.oldOnChange) this.oldOnChange(e);
+    if (this.props.onChange) this.props.onChange(e);
   }
+
   // eslint-disable-next-line require-jsdoc
   render() {
+    const {
+      ref,
+      rows,
+      onChange,
+      children,
+      ...rest
+    } = this.props;
     return <TextArea
       rows={this.state.rows}
       ref={this.areaRef}
-      onChange={this.checkResize}>
+      onChange={this.checkResize}
+      {...rest}
+    >
     </TextArea>;
   }
 }

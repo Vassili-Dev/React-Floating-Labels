@@ -1,6 +1,6 @@
 {
   "name": "react-floating-labels",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Floating labels component for rect",
   "main": "dist/react-floating-labels.js",
   "scripts": {
