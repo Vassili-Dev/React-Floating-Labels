@@ -1,15 +1,24 @@
 {
   "name": "react-floating-labels",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Floating labels component for rect",
   "main": "dist/react-floating-labels.js",
+  "homepage": "https://github.com/gilae/React-Floating-Labels",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/gilae/React-Floating-Labels"
+  },
   "scripts": {
     "test": "jest",
     "build": "webpack --mode production",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "Nickolai Vassiliev",
+  "author": {
+    "name": "Nickolai Vassiliev",
+    "email": "nickolaivassiliev@gmail.com",
+    "url": "https://vassili.dev"
+  },
   "license": "ISC",
   "dependencies": {},
   "peerDependencies": {
