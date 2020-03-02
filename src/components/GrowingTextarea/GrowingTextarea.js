@@ -3,7 +3,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import './GrowingTextarea.scss';
+import './styles.scss';
 
 const TextArea = styled.textarea`
     position: relative;
@@ -17,13 +17,13 @@ const TextArea = styled.textarea`
  * @property {string} onChange Change event for input field
  * @property {string} maxRows Maximum number of lines this can expand to
  */
-class GrowingTextArea extends React.Component {
+class GrowingTextarea extends React.Component {
   // eslint-disable-next-line require-jsdoc
   constructor(props) {
     super(props);
 
     this.state = {
-      rows: 1,
+      rows: 2,
       diff: 0,
     };
     this.checkResize = this.checkResize.bind(this);
@@ -78,4 +78,4 @@ class GrowingTextArea extends React.Component {
   }
 }
 
-export default GrowingTextArea;
+export default GrowingTextarea;
