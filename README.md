@@ -14,19 +14,19 @@ Additionally, this also provides an auto-extending textarea.
 
 ## Setup
 **NPM**
-```
+```Shell
 npm install react-floating-labels
 ```
 
 or
 
 **Yarn**
-```
+```Shell
 yarn add react-floating-labels
 ```
 
 ## Usage
-```
+```JSX
 import { FloatingInput } from 'react-floating-labels';
 
 const TestComp = (props) => {
