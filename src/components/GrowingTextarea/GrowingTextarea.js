@@ -49,7 +49,7 @@ class GrowingTextarea extends React.Component {
     const lines = (inp.value.match(/\n|\r\n|\r/g) || []).length;
     this.setState({rows: lines+1}, () => {
       const diff=Math.ceil((inp.scrollHeight-inp.clientHeight)/this.state.diff);
-      const newrows = this.state.rows + diff;
+      const newrows = parseInt(this.state.rows, 10) + parseInt(diff, 10);
       this.setState({
         rows: newrows <= this.props.maxRows
           ? newrows
