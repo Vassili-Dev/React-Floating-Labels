@@ -33,7 +33,7 @@ module.exports = {
     ],
   },
   resolve: {
-    // extensions: ['.scss', '.js', '.json', '.png', '.gif', '.jpg', '.svg'],
+    extensions: ['.scss', '.js', '.json', '.png', '.gif', '.jpg', '.svg'],
     alias: {
       'react': path.resolve(__dirname, './node_modules/react'),
       'react-dom': path.resolve(__dirname, './node_modules/react-dom'),

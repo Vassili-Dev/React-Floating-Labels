@@ -1,7 +1,7 @@
 {
   "name": "react-floating-labels",
-  "version": "1.1.1",
-  "description": "Floating labels component for rect",
+  "version": "1.1.2",
+  "description": "Floating labels component for react",
   "main": "dist/react-floating-labels.js",
   "homepage": "https://github.com/gilae/React-Floating-Labels",
   "repository": {
@@ -11,8 +11,6 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --mode production",
-    "transpile": "babel src -d dist --copy-files",
-    "prepublishOnly": "npm run transpile",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -23,7 +21,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.8.4"
   },
   "peerDependencies": {
     "react": "^16.9.0",
