@@ -23,7 +23,7 @@ class GrowingTextarea extends React.Component {
     super(props);
 
     this.state = {
-      rows: 2,
+      rows: 1,
       diff: 0,
     };
     this.checkResize = this.checkResize.bind(this);
@@ -34,6 +34,7 @@ class GrowingTextarea extends React.Component {
   componentDidMount() {
     const h1 = this.areaRef.current.clientHeight;
     this.setState({rows: 2}, (oldState) => {
+      this.areaRef.current.rows = 2;
       const h2 = this.areaRef.current.clientHeight;
       const diff = h2 - h1;
       this.setState({
