@@ -50,10 +50,11 @@ class GrowingTextarea extends React.Component {
     this.setState({rows: lines+1}, () => {
       const diff=Math.ceil((inp.scrollHeight-inp.clientHeight)/this.state.diff);
       const newrows = parseInt(this.state.rows, 10) + parseInt(diff, 10);
+      const maxRows = parseInt(this.props.maxRows, 10);
       this.setState({
-        rows: newrows <= this.props.maxRows
+        rows: newrows <= maxRows
           ? newrows
-          : this.props.maxRows,
+          : maxRows,
       });
     });
     if (this.props.onChange) this.props.onChange(e);
@@ -66,6 +67,7 @@ class GrowingTextarea extends React.Component {
       rows,
       onChange,
       children,
+      maxRows,
       ...rest
     } = this.props;
     return <TextArea
