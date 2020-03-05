@@ -19,6 +19,7 @@ const InputWrapper = styled.div`
  * @property {string} inputClass Class name for input field
  * @property {string} labelClass Class name for label
  */
+
 class FloatingInput extends React.Component {
   constructor(props) {
     super(props);
