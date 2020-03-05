@@ -1,3 +1,3 @@
-import GrowingTextarea from './GrowingTextarea.js';
+import GrowingTextarea from './GrowingTextarea';
 
 export default GrowingTextarea;
