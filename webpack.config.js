@@ -48,7 +48,7 @@ module.exports = {
     umdNamedDefine: true,
   },
   externals: {
-    // Don't bundle react, react-dom and styled-components   
+    // Don't bundle react, react-dom and styled-components
     react: {
         commonjs: "react",
         commonjs2: "react",
