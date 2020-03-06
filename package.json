@@ -1,6 +1,6 @@
 {
   "name": "react-floating-labels",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Floating labels component for react",
   "main": "dist/react-floating-labels.js",
   "homepage": "https://github.com/gilae/React-Floating-Labels",
